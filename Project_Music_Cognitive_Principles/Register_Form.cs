@@ -42,17 +42,24 @@ namespace Project_Music_Cognitive_Principles
             LoginForm_Obj.Closed += (s, args) => this.Close();
             LoginForm_Obj.Show();
         }
-        private void cb_Privacy_CheckedChanged(object sender, EventArgs e)
+
+        private void cb_Privacy_CheckedChanged_1(object sender, EventArgs e)
         {
-            //if (cb_Privacy.Checked)
-            //{
-            //    btn_Submit.Enabled = true;
-            //}
-            //else if (cb_Privacy.Checked == false)
-            //{
-            //    MessageBox.Show("Please accept the Privacy Policy");
-            //    btn_Submit.Enabled = false;
-            //}
+
         }
+        //private void cb_Privacy_CheckedChanged(object sender, EventArgs e)
+        //{
+        //    if (cb_Privacy.Checked)
+        //    {
+        //        btn_Submit.Enabled = true;
+        //    }
+        //    else if (cb_Privacy.Checked == false)
+        //    {
+        //        MessageBox.Show("Please accept the Privacy Policy");
+        //        btn_Submit.Enabled = false;
+        //    }
+        //}
+
+
     }
 }

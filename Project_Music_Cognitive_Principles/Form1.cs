@@ -61,7 +61,10 @@ namespace Project_Music_Cognitive_Principles
         {
             txt_Captcha.Text = Obj_data.GenerateCaptcha();
         }
+        private void LoginForm_Load(object sender, EventArgs e)
+        {
 
+        }
 
 
     }

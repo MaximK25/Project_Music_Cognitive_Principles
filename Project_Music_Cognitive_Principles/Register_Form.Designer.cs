@@ -160,6 +160,7 @@
             this.cb_Privacy.Size = new System.Drawing.Size(18, 17);
             this.cb_Privacy.TabIndex = 12;
             this.cb_Privacy.UseVisualStyleBackColor = true;
+            this.cb_Privacy.CheckedChanged += new System.EventHandler(this.cb_Privacy_CheckedChanged_1);
             // 
             // Register_Form
             // 
