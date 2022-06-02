@@ -22,7 +22,7 @@ namespace Project_Music_Cognitive_Principles
         private void btn_Register_Click(object sender, EventArgs e)
         {
             this.Hide();
-            var RegForm_Obj = new RegForm();
+            var RegForm_Obj = new Register_Form();
             RegForm_Obj.Closed += (s, args) => this.Close();
             RegForm_Obj.Show();
         }
@@ -34,7 +34,7 @@ namespace Project_Music_Cognitive_Principles
 
         private void btn_Login_Click(object sender, EventArgs e)
         {
-            bool val_Captcha = Obj_data.ValidateCaptcha(tb_Captcha.Text);
+            bool val_Captcha = Obj_data.ValidateCaptcha(txt_Captcha.Text);
             if (val_Captcha)
             {
                 string message = Obj_data.Login(txt_UserName.Text, txt_Password.Text);
@@ -59,7 +59,7 @@ namespace Project_Music_Cognitive_Principles
 
         private void btn_RefreshCaptcha_Click(object sender, EventArgs e)
         {
-            tb_Captcha.Text = Obj_data.GenerateCaptcha();
+            txt_Captcha.Text = Obj_data.GenerateCaptcha();
         }
 
 

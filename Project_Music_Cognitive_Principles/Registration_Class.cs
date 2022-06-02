@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.SqlClient;
 
 namespace Project_Music_Cognitive_Principles
 {
@@ -13,9 +14,9 @@ namespace Project_Music_Cognitive_Principles
         private SqlDataReader Reader_Login;
         string QueryString;
 
-        public Registration_Class();
+        public Registration_Class()
         {
-                    string ConnString = @"Data Source=NSK-NOTE06\SQLEXPRESS;Initial Catalog=Music;Integrated Security=True";
+             string ConnString = @"Data Source=NSK-NOTE06\SQLEXPRESS;Initial Catalog=Music;Integrated Security=True";
              Obj_Conn.ConnectionString = ConnString;
         }
     public string Registration(string UserName, string Email, string Password)

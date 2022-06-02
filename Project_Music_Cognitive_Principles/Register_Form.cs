@@ -38,7 +38,7 @@ namespace Project_Music_Cognitive_Principles
         private void btn_Back_Click(object sender, EventArgs e)
         {
             this.Hide();
-            var LoginForm_Obj = new LoginForm();
+            var LoginForm_Obj = new Form1();
             LoginForm_Obj.Closed += (s, args) => this.Close();
             LoginForm_Obj.Show();
         }

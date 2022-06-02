@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txt_UserName = new System.Windows.Forms.TextBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txt_Password = new System.Windows.Forms.TextBox();
+            this.txt_Email = new System.Windows.Forms.TextBox();
             this.tb_Privacy = new System.Windows.Forms.TextBox();
             this.btn_Submit = new System.Windows.Forms.Button();
             this.btn_Back = new System.Windows.Forms.Button();
@@ -44,12 +44,12 @@
             this.cb_Privacy = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
-            // textBox1
+            // txt_UserName
             // 
-            this.textBox1.Location = new System.Drawing.Point(251, 69);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(258, 22);
-            this.textBox1.TabIndex = 0;
+            this.txt_UserName.Location = new System.Drawing.Point(251, 69);
+            this.txt_UserName.Name = "txt_UserName";
+            this.txt_UserName.Size = new System.Drawing.Size(258, 22);
+            this.txt_UserName.TabIndex = 0;
             // 
             // contextMenuStrip1
             // 
@@ -57,19 +57,19 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
-            // textBox2
+            // txt_Password
             // 
-            this.textBox2.Location = new System.Drawing.Point(251, 184);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(258, 22);
-            this.textBox2.TabIndex = 2;
+            this.txt_Password.Location = new System.Drawing.Point(251, 184);
+            this.txt_Password.Name = "txt_Password";
+            this.txt_Password.Size = new System.Drawing.Size(258, 22);
+            this.txt_Password.TabIndex = 2;
             // 
-            // textBox3
+            // txt_Email
             // 
-            this.textBox3.Location = new System.Drawing.Point(251, 125);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(258, 22);
-            this.textBox3.TabIndex = 3;
+            this.txt_Email.Location = new System.Drawing.Point(251, 125);
+            this.txt_Email.Name = "txt_Email";
+            this.txt_Email.Size = new System.Drawing.Size(258, 22);
+            this.txt_Email.TabIndex = 3;
             // 
             // tb_Privacy
             // 
@@ -164,7 +164,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(640, 538);
+            this.ClientSize = new System.Drawing.Size(512, 430);
             this.Controls.Add(this.cb_Privacy);
             this.Controls.Add(this.lbl_Email);
             this.Controls.Add(this.lbl_Password);
@@ -174,9 +174,9 @@
             this.Controls.Add(this.btn_Back);
             this.Controls.Add(this.btn_Submit);
             this.Controls.Add(this.tb_Privacy);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txt_Email);
+            this.Controls.Add(this.txt_Password);
+            this.Controls.Add(this.txt_UserName);
             this.Name = "Register_Form";
             this.Text = "Register_Form";
             this.ResumeLayout(false);
@@ -186,10 +186,10 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txt_UserName;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txt_Password;
+        private System.Windows.Forms.TextBox txt_Email;
         private System.Windows.Forms.TextBox tb_Privacy;
         private System.Windows.Forms.Button btn_Submit;
         private System.Windows.Forms.Button btn_Back;
