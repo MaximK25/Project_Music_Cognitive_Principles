@@ -71,64 +71,75 @@
             // 
             // btn_RefreshCaptcha
             // 
-            this.btn_RefreshCaptcha.Location = new System.Drawing.Point(461, 229);
+            this.btn_RefreshCaptcha.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_RefreshCaptcha.Location = new System.Drawing.Point(461, 254);
             this.btn_RefreshCaptcha.Name = "btn_RefreshCaptcha";
             this.btn_RefreshCaptcha.Size = new System.Drawing.Size(122, 41);
             this.btn_RefreshCaptcha.TabIndex = 4;
             this.btn_RefreshCaptcha.Text = "Refresh";
             this.btn_RefreshCaptcha.UseVisualStyleBackColor = true;
+            this.btn_RefreshCaptcha.Click += new System.EventHandler(this.btn_RefreshCaptcha_Click);
             // 
             // btn_Exit
             // 
+            this.btn_Exit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Exit.Location = new System.Drawing.Point(61, 355);
             this.btn_Exit.Name = "btn_Exit";
             this.btn_Exit.Size = new System.Drawing.Size(122, 33);
             this.btn_Exit.TabIndex = 5;
             this.btn_Exit.Text = "Exit";
             this.btn_Exit.UseVisualStyleBackColor = true;
+            this.btn_Exit.Click += new System.EventHandler(this.btn_Exit_Click);
             // 
             // btn_Register
             // 
+            this.btn_Register.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Register.Location = new System.Drawing.Point(262, 358);
             this.btn_Register.Name = "btn_Register";
             this.btn_Register.Size = new System.Drawing.Size(122, 30);
             this.btn_Register.TabIndex = 6;
             this.btn_Register.Text = "Register";
             this.btn_Register.UseVisualStyleBackColor = true;
+            this.btn_Register.Click += new System.EventHandler(this.btn_Register_Click);
             // 
             // btn_Login
             // 
+            this.btn_Login.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Login.Location = new System.Drawing.Point(461, 352);
             this.btn_Login.Name = "btn_Login";
             this.btn_Login.Size = new System.Drawing.Size(122, 39);
             this.btn_Login.TabIndex = 7;
             this.btn_Login.Text = "Login";
             this.btn_Login.UseVisualStyleBackColor = true;
+            this.btn_Login.Click += new System.EventHandler(this.btn_Login_Click);
             // 
             // lbl_UserName
             // 
             this.lbl_UserName.AutoSize = true;
+            this.lbl_UserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_UserName.Location = new System.Drawing.Point(39, 61);
             this.lbl_UserName.Name = "lbl_UserName";
-            this.lbl_UserName.Size = new System.Drawing.Size(73, 16);
+            this.lbl_UserName.Size = new System.Drawing.Size(141, 31);
             this.lbl_UserName.TabIndex = 8;
             this.lbl_UserName.Text = "UserName";
             // 
             // lbl_Captcha
             // 
             this.lbl_Captcha.AutoSize = true;
-            this.lbl_Captcha.Location = new System.Drawing.Point(39, 202);
+            this.lbl_Captcha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Captcha.Location = new System.Drawing.Point(39, 199);
             this.lbl_Captcha.Name = "lbl_Captcha";
-            this.lbl_Captcha.Size = new System.Drawing.Size(57, 16);
+            this.lbl_Captcha.Size = new System.Drawing.Size(93, 25);
             this.lbl_Captcha.TabIndex = 9;
             this.lbl_Captcha.Text = "Captcha";
             // 
             // lbl_Password
             // 
             this.lbl_Password.AutoSize = true;
+            this.lbl_Password.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Password.Location = new System.Drawing.Point(39, 135);
             this.lbl_Password.Name = "lbl_Password";
-            this.lbl_Password.Size = new System.Drawing.Size(67, 16);
+            this.lbl_Password.Size = new System.Drawing.Size(133, 31);
             this.lbl_Password.TabIndex = 10;
             this.lbl_Password.Text = "Password";
             // 
@@ -136,7 +147,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(692, 465);
+            this.ClientSize = new System.Drawing.Size(692, 416);
             this.Controls.Add(this.lbl_Password);
             this.Controls.Add(this.lbl_Captcha);
             this.Controls.Add(this.lbl_UserName);
