@@ -61,6 +61,7 @@
             // 
             this.txt_Password.Location = new System.Drawing.Point(251, 184);
             this.txt_Password.Name = "txt_Password";
+            this.txt_Password.PasswordChar = '*';
             this.txt_Password.Size = new System.Drawing.Size(258, 22);
             this.txt_Password.TabIndex = 2;
             // 
@@ -164,7 +165,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(512, 430);
+            this.ClientSize = new System.Drawing.Size(640, 538);
             this.Controls.Add(this.cb_Privacy);
             this.Controls.Add(this.lbl_Email);
             this.Controls.Add(this.lbl_Password);

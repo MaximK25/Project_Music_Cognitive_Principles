@@ -52,6 +52,7 @@
             // 
             this.txt_Password.Location = new System.Drawing.Point(193, 135);
             this.txt_Password.Name = "txt_Password";
+            this.txt_Password.PasswordChar = '*';
             this.txt_Password.Size = new System.Drawing.Size(243, 22);
             this.txt_Password.TabIndex = 1;
             // 
@@ -64,6 +65,7 @@
             // 
             // txt_Captcha
             // 
+            this.txt_Captcha.Enabled = false;
             this.txt_Captcha.Location = new System.Drawing.Point(193, 199);
             this.txt_Captcha.Name = "txt_Captcha";
             this.txt_Captcha.Size = new System.Drawing.Size(243, 22);
