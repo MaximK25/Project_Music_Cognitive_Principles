@@ -171,17 +171,19 @@
             // 
             this.tb_UserCaptcha_RF.Location = new System.Drawing.Point(251, 296);
             this.tb_UserCaptcha_RF.Name = "tb_UserCaptcha_RF";
-            this.tb_UserCaptcha_RF.Size = new System.Drawing.Size(258, 22);
+            this.tb_UserCaptcha_RF.Size = new System.Drawing.Size(250, 22);
             this.tb_UserCaptcha_RF.TabIndex = 16;
             // 
             // btn_RefreshCaptcha_LF
             // 
+            this.btn_RefreshCaptcha_LF.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_RefreshCaptcha_LF.Location = new System.Drawing.Point(543, 243);
             this.btn_RefreshCaptcha_LF.Name = "btn_RefreshCaptcha_LF";
             this.btn_RefreshCaptcha_LF.Size = new System.Drawing.Size(75, 23);
             this.btn_RefreshCaptcha_LF.TabIndex = 15;
             this.btn_RefreshCaptcha_LF.Text = "Refresh";
             this.btn_RefreshCaptcha_LF.UseVisualStyleBackColor = true;
+            this.btn_RefreshCaptcha_LF.Click += new System.EventHandler(this.btn_RefreshCaptcha_LF_Click);
             // 
             // tb_Captcha_RF
             // 

@@ -18,6 +18,7 @@ namespace Project_Music_Cognitive_Principles
             InitializeComponent();
             tb_Privacy.Text = "This is a company Privacy Policy, Please read it Carefully";
             tb_Captcha_RF.Text = Obj_Reg.GenerateCaptcha();
+            
         }
 
         private void btn_Submit_Click(object sender, EventArgs e)
@@ -74,7 +75,12 @@ namespace Project_Music_Cognitive_Principles
         {
 
         }
-        private void btn_RefreshCaptcha_Click(object sender, EventArgs e)
+        //private void btn_RefreshCaptcha_Click(object sender, EventArgs e)
+        //{
+        //    tb_Captcha_RF.Text = Obj_Reg.GenerateCaptcha();
+        //}
+
+        private void btn_RefreshCaptcha_LF_Click(object sender, EventArgs e)
         {
             tb_Captcha_RF.Text = Obj_Reg.GenerateCaptcha();
         }
