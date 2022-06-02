@@ -38,10 +38,14 @@
             this.btn_Back = new System.Windows.Forms.Button();
             this.lbl_UserName = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.label3_RF = new System.Windows.Forms.Label();
             this.lbl_Password = new System.Windows.Forms.Label();
             this.lbl_Email = new System.Windows.Forms.Label();
             this.cb_Privacy = new System.Windows.Forms.CheckBox();
+            this.tb_UserCaptcha_RF = new System.Windows.Forms.TextBox();
+            this.btn_RefreshCaptcha_LF = new System.Windows.Forms.Button();
+            this.tb_Captcha_RF = new System.Windows.Forms.TextBox();
+            this.label1_RF = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txt_UserName
@@ -74,7 +78,7 @@
             // 
             // tb_Privacy
             // 
-            this.tb_Privacy.Location = new System.Drawing.Point(251, 252);
+            this.tb_Privacy.Location = new System.Drawing.Point(251, 362);
             this.tb_Privacy.Multiline = true;
             this.tb_Privacy.Name = "tb_Privacy";
             this.tb_Privacy.Size = new System.Drawing.Size(258, 77);
@@ -83,7 +87,7 @@
             // btn_Submit
             // 
             this.btn_Submit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Submit.Location = new System.Drawing.Point(169, 447);
+            this.btn_Submit.Location = new System.Drawing.Point(169, 557);
             this.btn_Submit.Name = "btn_Submit";
             this.btn_Submit.Size = new System.Drawing.Size(92, 33);
             this.btn_Submit.TabIndex = 5;
@@ -94,7 +98,7 @@
             // btn_Back
             // 
             this.btn_Back.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Back.Location = new System.Drawing.Point(392, 447);
+            this.btn_Back.Location = new System.Drawing.Point(392, 557);
             this.btn_Back.Name = "btn_Back";
             this.btn_Back.Size = new System.Drawing.Size(85, 35);
             this.btn_Back.TabIndex = 6;
@@ -116,21 +120,22 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(279, 350);
+            this.label2.Location = new System.Drawing.Point(279, 460);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(198, 20);
             this.label2.TabIndex = 8;
             this.label2.Text = "I agree the Privacy Policy";
             // 
-            // label3
+            // label3_RF
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(61, 252);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(147, 25);
-            this.label3.TabIndex = 9;
-            this.label3.Text = "Privacy Policy";
+            this.label3_RF.AutoSize = true;
+            this.label3_RF.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3_RF.Location = new System.Drawing.Point(61, 362);
+            this.label3_RF.Name = "label3_RF";
+            this.label3_RF.Size = new System.Drawing.Size(147, 25);
+            this.label3_RF.TabIndex = 9;
+            this.label3_RF.Text = "Privacy Policy";
+            this.label3_RF.Click += new System.EventHandler(this.label3_Click);
             // 
             // lbl_Password
             // 
@@ -155,22 +160,60 @@
             // cb_Privacy
             // 
             this.cb_Privacy.AutoSize = true;
-            this.cb_Privacy.Location = new System.Drawing.Point(243, 354);
+            this.cb_Privacy.Location = new System.Drawing.Point(243, 464);
             this.cb_Privacy.Name = "cb_Privacy";
             this.cb_Privacy.Size = new System.Drawing.Size(18, 17);
             this.cb_Privacy.TabIndex = 12;
             this.cb_Privacy.UseVisualStyleBackColor = true;
             this.cb_Privacy.CheckedChanged += new System.EventHandler(this.cb_Privacy_CheckedChanged_1);
             // 
+            // tb_UserCaptcha_RF
+            // 
+            this.tb_UserCaptcha_RF.Location = new System.Drawing.Point(251, 296);
+            this.tb_UserCaptcha_RF.Name = "tb_UserCaptcha_RF";
+            this.tb_UserCaptcha_RF.Size = new System.Drawing.Size(258, 22);
+            this.tb_UserCaptcha_RF.TabIndex = 16;
+            // 
+            // btn_RefreshCaptcha_LF
+            // 
+            this.btn_RefreshCaptcha_LF.Location = new System.Drawing.Point(543, 243);
+            this.btn_RefreshCaptcha_LF.Name = "btn_RefreshCaptcha_LF";
+            this.btn_RefreshCaptcha_LF.Size = new System.Drawing.Size(75, 23);
+            this.btn_RefreshCaptcha_LF.TabIndex = 15;
+            this.btn_RefreshCaptcha_LF.Text = "Refresh";
+            this.btn_RefreshCaptcha_LF.UseVisualStyleBackColor = true;
+            // 
+            // tb_Captcha_RF
+            // 
+            this.tb_Captcha_RF.Enabled = false;
+            this.tb_Captcha_RF.Location = new System.Drawing.Point(251, 243);
+            this.tb_Captcha_RF.Name = "tb_Captcha_RF";
+            this.tb_Captcha_RF.Size = new System.Drawing.Size(258, 22);
+            this.tb_Captcha_RF.TabIndex = 14;
+            // 
+            // label1_RF
+            // 
+            this.label1_RF.AutoSize = true;
+            this.label1_RF.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1_RF.Location = new System.Drawing.Point(69, 239);
+            this.label1_RF.Name = "label1_RF";
+            this.label1_RF.Size = new System.Drawing.Size(93, 25);
+            this.label1_RF.TabIndex = 13;
+            this.label1_RF.Text = "Captcha";
+            // 
             // Register_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(626, 507);
+            this.ClientSize = new System.Drawing.Size(670, 687);
+            this.Controls.Add(this.tb_UserCaptcha_RF);
+            this.Controls.Add(this.btn_RefreshCaptcha_LF);
+            this.Controls.Add(this.tb_Captcha_RF);
+            this.Controls.Add(this.label1_RF);
             this.Controls.Add(this.cb_Privacy);
             this.Controls.Add(this.lbl_Email);
             this.Controls.Add(this.lbl_Password);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label3_RF);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lbl_UserName);
             this.Controls.Add(this.btn_Back);
@@ -197,9 +240,13 @@
         private System.Windows.Forms.Button btn_Back;
         private System.Windows.Forms.Label lbl_UserName;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label3_RF;
         private System.Windows.Forms.Label lbl_Password;
         private System.Windows.Forms.Label lbl_Email;
         private System.Windows.Forms.CheckBox cb_Privacy;
+        private System.Windows.Forms.TextBox tb_UserCaptcha_RF;
+        private System.Windows.Forms.Button btn_RefreshCaptcha_LF;
+        private System.Windows.Forms.TextBox tb_Captcha_RF;
+        private System.Windows.Forms.Label label1_RF;
     }
 }

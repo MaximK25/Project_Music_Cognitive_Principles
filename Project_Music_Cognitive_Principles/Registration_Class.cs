@@ -13,7 +13,7 @@ namespace Project_Music_Cognitive_Principles
         private SqlCommand Cmd = new SqlCommand();
         private SqlDataReader Reader_Login;
         string QueryString;
-
+        int number = 0;
         public Registration_Class()
         {
              string ConnString = @"Data Source=NSK-NOTE06\SQLEXPRESS;Initial Catalog=Music;Integrated Security=True";
@@ -57,7 +57,26 @@ namespace Project_Music_Cognitive_Principles
         }
     }
 
+        public string GenerateCaptcha()
+        {
+
+            Random ran_num = new Random();
+            number = ran_num.Next(9999, 99999);
+            return number.ToString();
+        }
 
 
-}
+        public bool ValidateCaptcha(string userCaptcha)
+        {
+            if (number.ToString() == userCaptcha)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+    }
 }

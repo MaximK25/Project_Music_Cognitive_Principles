@@ -17,11 +17,33 @@ namespace Project_Music_Cognitive_Principles
         {
             InitializeComponent();
             tb_Privacy.Text = "This is a company Privacy Policy, Please read it Carefully";
+            tb_Captcha_RF.Text = Obj_Reg.GenerateCaptcha();
         }
 
         private void btn_Submit_Click(object sender, EventArgs e)
         {
-             if (cb_Privacy.Checked)
+            bool val_Captcha = Obj_Reg.ValidateCaptcha(tb_Captcha_RF.Text);
+            if (val_Captcha)
+            {
+                string message = Obj_Reg.Registration(txt_UserName.Text, txt_Email.Text, txt_Password.Text);
+                if (message == "User Login Successfully")
+                {
+                    MessageBox.Show(message);
+                    this.Hide();
+                    var DashboardForm_Obj = new DashboardForm();
+                    DashboardForm_Obj.Closed += (s, args) => this.Close();
+                    DashboardForm_Obj.Show();
+                }
+                else
+                {
+                    MessageBox.Show(message);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Invalid Captcha");
+            }
+            if (cb_Privacy.Checked)
             {
                 string message = Obj_Reg.Registration(txt_UserName.Text, txt_Email.Text, txt_Password.Text);
                 MessageBox.Show(message);
@@ -47,6 +69,21 @@ namespace Project_Music_Cognitive_Principles
         {
 
         }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void btn_RefreshCaptcha_Click(object sender, EventArgs e)
+        {
+            tb_Captcha_RF.Text = Obj_Reg.GenerateCaptcha();
+        }
+
+        //private void btn_RefreshCaptcha_LF_Click(object sender, EventArgs e)
+        //{
+        //    tb_Captcha_RF.Text = Obj_data.GenerateCaptcha();
+        //}
+
         //private void cb_Privacy_CheckedChanged(object sender, EventArgs e)
         //{
         //    if (cb_Privacy.Checked)
