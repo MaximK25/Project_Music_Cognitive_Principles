@@ -78,6 +78,7 @@
             // 
             // tb_Privacy
             // 
+            this.tb_Privacy.Enabled = false;
             this.tb_Privacy.Location = new System.Drawing.Point(251, 362);
             this.tb_Privacy.Multiline = true;
             this.tb_Privacy.Name = "tb_Privacy";
@@ -86,6 +87,7 @@
             // 
             // btn_Submit
             // 
+            this.btn_Submit.Enabled = false;
             this.btn_Submit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Submit.Location = new System.Drawing.Point(169, 557);
             this.btn_Submit.Name = "btn_Submit";

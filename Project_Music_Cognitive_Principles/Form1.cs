@@ -16,7 +16,7 @@ namespace Project_Music_Cognitive_Principles
         public Form1()
         {
             InitializeComponent();
-            txt_UserCaptcha.Text = Obj_data.GenerateCaptcha();
+            
         }
 
         private void btn_Register_Click(object sender, EventArgs e)
@@ -39,6 +39,7 @@ namespace Project_Music_Cognitive_Principles
             {
                 string message = Obj_data.Login(txt_UserName.Text, txt_Password.Text);
                 if (message == "User Login Successfully")
+
                 {
                     MessageBox.Show(message);
                     this.Hide();

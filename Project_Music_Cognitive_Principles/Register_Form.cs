@@ -44,7 +44,7 @@ namespace Project_Music_Cognitive_Principles
             {
                 MessageBox.Show("Invalid Captcha");
             }
-            if (cb_Privacy.Checked)
+            //if (cb_Privacy.Checked)
             {
                 string message = Obj_Reg.Registration(txt_UserName.Text, txt_Email.Text, txt_Password.Text);
                 MessageBox.Show(message);
@@ -52,10 +52,10 @@ namespace Project_Music_Cognitive_Principles
                 txt_Email.Text = "";
                 txt_Password.Text = "";
             }
-             else
-            {
-                MessageBox.Show("Please accept the Privacy Policy");
-            }
+            // else
+            //{
+            //    MessageBox.Show("Please accept the Privacy Policy");
+            //}
         }
 
         private void btn_Back_Click(object sender, EventArgs e)
@@ -68,17 +68,20 @@ namespace Project_Music_Cognitive_Principles
 
         private void cb_Privacy_CheckedChanged_1(object sender, EventArgs e)
         {
-
+            if (cb_Privacy.Checked)
+            {
+                btn_Submit.Enabled = true;
+            }
+            else if (cb_Privacy.Checked==false)
+            {
+                btn_Submit.Enabled=false;
+            }
         }
 
         private void label3_Click(object sender, EventArgs e)
         {
 
-        }
-        //private void btn_RefreshCaptcha_Click(object sender, EventArgs e)
-        //{
-        //    tb_Captcha_RF.Text = Obj_Reg.GenerateCaptcha();
-        //}
+        }      
 
         private void btn_RefreshCaptcha_LF_Click(object sender, EventArgs e)
         {
@@ -102,7 +105,10 @@ namespace Project_Music_Cognitive_Principles
         //        btn_Submit.Enabled = false;
         //    }
         //}
-
+        //private void btn_RefreshCaptcha_Click(object sender, EventArgs e)
+        //{
+        //    tb_Captcha_RF.Text = Obj_Reg.GenerateCaptcha();
+        //}
 
     }
 }
