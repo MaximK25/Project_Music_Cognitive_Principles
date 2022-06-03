@@ -16,7 +16,7 @@ namespace Project_Music_Cognitive_Principles
         public Form1()
         {
             InitializeComponent();
-            
+            txt_Captcha.Text = Obj_data.GenerateCaptcha();
         }
 
         private void btn_Register_Click(object sender, EventArgs e)

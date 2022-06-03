@@ -46,6 +46,7 @@ namespace Project_Music_Cognitive_Principles
             }
             catch (Exception ex)
             {
+            
                 // show error Message
                 return ex.Message;
             }
@@ -62,7 +63,6 @@ namespace Project_Music_Cognitive_Principles
 
         public string GenerateCaptcha()
         {
-
             Random ran_num = new Random();
             number = ran_num.Next(9999, 99999);
             return number.ToString();

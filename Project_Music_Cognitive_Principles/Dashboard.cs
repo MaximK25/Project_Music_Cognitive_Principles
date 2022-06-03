@@ -19,7 +19,15 @@ namespace Project_Music_Cognitive_Principles
 
         private void button2_Click(object sender, EventArgs e)
         {
+            this.Hide();
+            var LoginForm_Obj = new Form1();
+            LoginForm_Obj.Closed += (s, args) => this.Close();
+            LoginForm_Obj.Show();
+        }
 
+        private void btn_Exit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

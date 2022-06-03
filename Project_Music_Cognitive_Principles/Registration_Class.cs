@@ -64,8 +64,6 @@ namespace Project_Music_Cognitive_Principles
             number = ran_num.Next(9999, 99999);
             return number.ToString();
         }
-
-
         public bool ValidateCaptcha(string userCaptcha)
         {
             if (number.ToString() == userCaptcha)
