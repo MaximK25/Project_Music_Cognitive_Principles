@@ -27,6 +27,7 @@ namespace Project_Music_Cognitive_Principles
             RegForm_Obj.Show();
         }
 
+
         private void btn_Exit_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -67,6 +68,16 @@ namespace Project_Music_Cognitive_Principles
 
         }
 
+        private void btn_register_MouseHover(object sender, EventArgs e)
+        {
+            btn_Register.ForeColor = Color.White;
+            btn_Register.BackColor = Color.Purple;
+        }
 
+        private void btn_1_Click(object sender, EventArgs e)
+        {
+            btn_Exit.ForeColor = Color.White;
+            btn_Exit.BackColor = Color.GreenYellow;
+        }
     }
 }
