@@ -23,11 +23,12 @@ namespace Project_Music_Cognitive_Principles
 
         private void btn_Submit_Click(object sender, EventArgs e)
         {
-            bool val_Captcha = Obj_Reg.ValidateCaptcha(tb_Captcha_RF.Text);
+            bool val_Captcha = Obj_Reg.ValidateCaptcha(tb_UserCaptcha_RF.Text);
+           
             if (val_Captcha)
             {
                 string message = Obj_Reg.Registration(txt_UserName.Text, txt_Email.Text, txt_Password.Text);
-                if (message == "User Login Successfully")
+                if (message == "User registered Successfully")
                 {
                     MessageBox.Show(message);
                     this.Hide();
@@ -44,18 +45,11 @@ namespace Project_Music_Cognitive_Principles
             {
                 MessageBox.Show("Invalid Captcha");
             }
-            //if (cb_Privacy.Checked)
-            {
-                string message = Obj_Reg.Registration(txt_UserName.Text, txt_Email.Text, txt_Password.Text);
-                MessageBox.Show(message);
-                txt_UserName.Text = "";
+
+               txt_UserName.Text = "";
                 txt_Email.Text = "";
                 txt_Password.Text = "";
-            }
-            // else
-            //{
-            //    MessageBox.Show("Please accept the Privacy Policy");
-            //}
+
         }
 
         private void btn_Back_Click(object sender, EventArgs e)
