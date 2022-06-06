@@ -39,6 +39,7 @@
             this.lbl_UserName = new System.Windows.Forms.Label();
             this.lbl_Captcha = new System.Windows.Forms.Label();
             this.lbl_Password = new System.Windows.Forms.Label();
+            this.btn_1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txt_UserName
@@ -103,6 +104,7 @@
             this.btn_Register.Text = "Register";
             this.btn_Register.UseVisualStyleBackColor = true;
             this.btn_Register.Click += new System.EventHandler(this.btn_Register_Click);
+            this.btn_Register.MouseHover += new System.EventHandler(this.btn_register_MouseHover);
             // 
             // btn_Login
             // 
@@ -121,7 +123,7 @@
             this.lbl_UserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_UserName.Location = new System.Drawing.Point(39, 61);
             this.lbl_UserName.Name = "lbl_UserName";
-            this.lbl_UserName.Size = new System.Drawing.Size(141, 31);
+            this.lbl_UserName.Size = new System.Drawing.Size(113, 25);
             this.lbl_UserName.TabIndex = 8;
             this.lbl_UserName.Text = "UserName";
             // 
@@ -141,15 +143,26 @@
             this.lbl_Password.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Password.Location = new System.Drawing.Point(39, 135);
             this.lbl_Password.Name = "lbl_Password";
-            this.lbl_Password.Size = new System.Drawing.Size(133, 31);
+            this.lbl_Password.Size = new System.Drawing.Size(106, 25);
             this.lbl_Password.TabIndex = 10;
             this.lbl_Password.Text = "Password";
+            // 
+            // btn_1
+            // 
+            this.btn_1.Location = new System.Drawing.Point(12, 358);
+            this.btn_1.Name = "btn_1";
+            this.btn_1.Size = new System.Drawing.Size(27, 22);
+            this.btn_1.TabIndex = 11;
+            this.btn_1.Text = "1";
+            this.btn_1.UseVisualStyleBackColor = true;
+            this.btn_1.Click += new System.EventHandler(this.btn_1_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(692, 416);
+            this.Controls.Add(this.btn_1);
             this.Controls.Add(this.lbl_Password);
             this.Controls.Add(this.lbl_Captcha);
             this.Controls.Add(this.lbl_UserName);
@@ -181,6 +194,7 @@
         private System.Windows.Forms.Label lbl_UserName;
         private System.Windows.Forms.Label lbl_Captcha;
         private System.Windows.Forms.Label lbl_Password;
+        private System.Windows.Forms.Button btn_1;
     }
 }
 
